@@ -24,6 +24,14 @@ public class TransactionController {
         this.transactionService = transactionService;
     }
 
+    @GetMapping
+    public ResponseEntity<?> getAll() {
+        
+        List<Transaction> transactions = transactionService.getAll();
+
+        return ResponseEntity.ok(transactions);
+    }
+
     @GetMapping("/to/{toName}")
     public ResponseEntity<?> getFilterTo(@PathVariable String toName) {
         List<Transaction> transactions = transactionService.getAll();

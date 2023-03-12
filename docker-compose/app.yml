@@ -7,6 +7,9 @@ services:
       - '8080:8080'
     depends_on:
       - db
+      - kafka-broker-1
+      - kafka-broker-2
+      - kafka-broker-3
     environment:
       - "KAFKA-CONFIG_BOOTSTRAP-SERVERS=kafka-broker-1:9092, kafka-broker-2:9092, kafka-broker-3:9092"
       - "SERVER_PORT=8080"
@@ -19,6 +22,9 @@ services:
       - '8081:8081'
     depends_on:
       - db
+      - kafka-broker-1
+      - kafka-broker-2
+      - kafka-broker-3
     environment:
       - "KAFKA-CONFIG_BOOTSTRAP-SERVERS=kafka-broker-1:9092, kafka-broker-2:9092, kafka-broker-3:9092"
       - "SERVER_PORT=8081"
@@ -31,6 +37,9 @@ services:
       - '8082:8082'
     depends_on:
       - db
+      - kafka-broker-1
+      - kafka-broker-2
+      - kafka-broker-3
     environment:
       - "KAFKA-CONFIG_BOOTSTRAP-SERVERS=kafka-broker-1:9092, kafka-broker-2:9092, kafka-broker-3:9092"
       - "SERVER_PORT=8082"
