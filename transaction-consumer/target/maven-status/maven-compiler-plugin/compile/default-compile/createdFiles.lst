@@ -1,0 +1,8 @@
+com\dummy\bank\system\transaction\consumer\TransactionConsumer.class
+com\dummy\bank\system\transaction\consumer\repository\TransactionRepository.class
+com\dummy\bank\system\transaction\consumer\service\impl\TransactionServiceImpl.class
+com\dummy\bank\system\transaction\consumer\repository\impl\TransactionRepositoryImpl.class
+com\dummy\bank\system\transaction\consumer\controller\TransactionController.class
+com\dummy\bank\system\transaction\consumer\config\TransactionConsumerConfig.class
+com\dummy\bank\system\transaction\consumer\App.class
+com\dummy\bank\system\transaction\consumer\service\TransactionService.class

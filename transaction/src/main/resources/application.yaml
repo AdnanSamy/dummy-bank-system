@@ -1,0 +1,14 @@
+kafka-config:
+  bootstrap-servers: localhost:19092, localhost:29092, localhost:39092
+  transaction-topic: transaction-topic
+  num-of-partitions: 3
+  replication-factor: 3
+
+kafka-producer-config:
+  compression-type: snappy
+  acks: all
+  batch-size: 16384
+  batch-size-boost-factor: 100
+  linger-ms: 5
+  request-timeout-ms: 60000
+  retry-count: 5

@@ -1,0 +1,7 @@
+G:\Latihan\Java\fraud-system\dummy-bank-system\proccessor\src\main\java\com\dummy\bank\system\proccessor\config\ProccessorConfig.java
+G:\Latihan\Java\fraud-system\dummy-bank-system\proccessor\src\main\java\com\dummy\bank\system\proccessor\serdes\JsonDeserializer.java
+G:\Latihan\Java\fraud-system\dummy-bank-system\proccessor\src\main\java\com\dummy\bank\system\proccessor\serdes\JsonSerializer.java
+G:\Latihan\Java\fraud-system\dummy-bank-system\proccessor\src\main\java\com\dummy\bank\system\proccessor\serdes\TransactionSerdes.java
+G:\Latihan\Java\fraud-system\dummy-bank-system\proccessor\src\main\java\com\dummy\bank\system\proccessor\config\KafkaTopicConfig.java
+G:\Latihan\Java\fraud-system\dummy-bank-system\proccessor\src\main\java\com\dummy\bank\system\proccessor\App.java
+G:\Latihan\Java\fraud-system\dummy-bank-system\proccessor\src\main\java\com\dummy\bank\system\proccessor\ConvertToIdr.java

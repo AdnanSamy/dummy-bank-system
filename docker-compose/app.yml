@@ -1,0 +1,41 @@
+version: '3.7'
+services:
+  app-transaction:
+    image: 'com.dummy.bank.system/transaction:latest'
+    container_name: app-transaction
+    ports:
+      - '8080:8080'
+    depends_on:
+      - db
+    environment:
+      - "KAFKA-CONFIG_BOOTSTRAP-SERVERS=kafka-broker-1:9092, kafka-broker-2:9092, kafka-broker-3:9092"
+      - "SERVER_PORT=8080"
+    networks:
+      - ${GLOBAL_NETWORK:-app}
+  app-proccessor:
+    image: 'com.dummy.bank.system/proccessor'
+    container_name: app-proccessor
+    ports:
+      - '8081:8081'
+    depends_on:
+      - db
+    environment:
+      - "KAFKA-CONFIG_BOOTSTRAP-SERVERS=kafka-broker-1:9092, kafka-broker-2:9092, kafka-broker-3:9092"
+      - "SERVER_PORT=8081"
+    networks:
+      - ${GLOBAL_NETWORK:-app}   
+  app-transaction-consumer:
+    image: 'com.dummy.bank.system/transaction-consumer'
+    container_name: app-transaction-consumer
+    ports:
+      - '8082:8082'
+    depends_on:
+      - db
+    environment:
+      - "KAFKA-CONFIG_BOOTSTRAP-SERVERS=kafka-broker-1:9092, kafka-broker-2:9092, kafka-broker-3:9092"
+      - "SERVER_PORT=8082"
+      - "SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/dummy_bank_system"
+      - "SPRING_DATASOURCE_USERNAME=admin"
+      - "SPRING_DATASOURCE_PASSWORD=admin"
+    networks:
+      - ${GLOBAL_NETWORK:-app}   

@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  db:
+    image: postgres:14.1-alpine
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+    ports:
+      - '5432:5432'
+    volumes: 
+      - ./db:/var/lib/postgresql/data
+    networks:
+      - ${GLOBAL_NETWORK:-postgre}

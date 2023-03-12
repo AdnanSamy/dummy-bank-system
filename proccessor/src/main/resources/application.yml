@@ -1,0 +1,8 @@
+kafka-config:
+  bootstrap-servers: localhost:19092, localhost:29092, localhost:39092
+  input-transaction-topic: transaction-topic
+  transaction-topic: idr-transaction-topic
+  num-of-partitions: 3
+  replication-factor: 3
+server:
+  port : 8081

@@ -1,0 +1,7 @@
+com\dummy\bank\system\transaction\producer\TransactionProducer$1.class
+com\dummy\bank\system\transaction\config\KafkaTopicConfig.class
+com\dummy\bank\system\transaction\config\ProducerConfiguration.class
+com\dummy\bank\system\transaction\config\TransactionConfig.class
+com\dummy\bank\system\transaction\producer\TransactionProducer.class
+com\dummy\bank\system\transaction\App.class
+com\dummy\bank\system\transaction\config\KafkaProducerConfigData.class

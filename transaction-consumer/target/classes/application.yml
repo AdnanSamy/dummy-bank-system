@@ -1,0 +1,12 @@
+kafka-config:
+  bootstrap-servers: localhost:19092, localhost:29092, localhost:39092
+  transaction-topic: idr-transaction-topic
+  num-of-partitions: 3
+  replication-factor: 3
+server:
+  port : 8082
+# spring:
+#   datasource:
+#     url: jdbc:postgresql://localhost:5432/dummy_bank_system
+#     username: admin
+#     password: admin

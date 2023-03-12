@@ -1,0 +1,7 @@
+com\dummy\bank\system\proccessor\ConvertToIdr.class
+com\dummy\bank\system\proccessor\serdes\JsonSerializer.class
+com\dummy\bank\system\proccessor\config\KafkaTopicConfig.class
+com\dummy\bank\system\proccessor\config\ProccessorConfig.class
+com\dummy\bank\system\proccessor\serdes\JsonDeserializer.class
+com\dummy\bank\system\proccessor\App.class
+com\dummy\bank\system\proccessor\serdes\TransactionSerdes.class

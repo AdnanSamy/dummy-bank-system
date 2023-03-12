@@ -1,0 +1,3 @@
+com\dummy\bank\system\kafka\model\Transaction.class
+com\dummy\bank\system\kafka\App.class
+com\dummy\bank\system\kafka\config\KafkaConfigData.class
