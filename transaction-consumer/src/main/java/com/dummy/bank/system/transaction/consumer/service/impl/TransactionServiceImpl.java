@@ -27,4 +27,9 @@ public class TransactionServiceImpl implements TransactionService {
         return transactionRepository.getAll();
     }
 
+    @Override
+    public List<Transaction> getByCurrency() {
+        return transactionRepository.getByCurrency();
+    }
+
 }

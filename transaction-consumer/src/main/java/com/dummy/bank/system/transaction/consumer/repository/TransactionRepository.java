@@ -7,4 +7,5 @@ import com.dummy.bank.system.kafka.model.Transaction;
 public interface TransactionRepository {
     public void insert(Transaction transaction);
     public List<Transaction> getAll();
+    public List<Transaction> getByCurrency();
 }

@@ -105,7 +105,47 @@ public class TransactionRepositoryImpl implements TransactionRepository {
                 e.printStackTrace();
             }
         }
-        
+
+        return transactions;
+    }
+
+    @Override
+    public List<Transaction> getByCurrency() {
+        List<Transaction> transactions = new ArrayList<>();
+        Connection conn = null;
+        PreparedStatement pst = null;
+        ResultSet rs = null;
+        try {
+            conn = dataSource.getConnection();
+            StringBuffer sb = new StringBuffer();
+            sb.append("SELECT currency, SUM(amount) AS amount FROM transaction \n");
+            sb.append("	GROUP BY currency \n");
+            pst = conn.prepareStatement(sb.toString());
+            rs = pst.executeQuery();
+            while (rs.next()) {
+                Transaction transaction = new Transaction();
+                transaction.setAmount(rs.getLong("amount"));
+                transaction.setCurrency(rs.getString("currency"));
+
+                transactions.add(transaction);
+            }
+
+        } catch (SQLException e) {
+            try {
+                conn.rollback();
+            } catch (SQLException e1) {
+                e1.printStackTrace();
+            }
+        } finally {
+            try {
+                pst.close();
+                conn.close();
+                rs.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
         return transactions;
     }
 
