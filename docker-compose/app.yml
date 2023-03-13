@@ -16,7 +16,7 @@ services:
     networks:
       - ${GLOBAL_NETWORK:-app}
   app-proccessor:
-    image: 'com.dummy.bank.system/proccessor'
+    image: 'com.dummy.bank.system/proccessor:latest'
     container_name: app-proccessor
     ports:
       - '8081:8081'
@@ -28,10 +28,10 @@ services:
     environment:
       - "KAFKA-CONFIG_BOOTSTRAP-SERVERS=kafka-broker-1:9092, kafka-broker-2:9092, kafka-broker-3:9092"
       - "SERVER_PORT=8081"
-    networks:
+    networks:dummy
       - ${GLOBAL_NETWORK:-app}   
   app-transaction-consumer:
-    image: 'com.dummy.bank.system/transaction-consumer'
+    image: 'com.dummy.bank.system/transaction-consumer:latest'
     container_name: app-transaction-consumer
     ports:
       - '8082:8082'
