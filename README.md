@@ -1,5 +1,5 @@
 ﻿# dummy-bank-system
- #### Dummy system that streamed transaction from dummy transaction service and consumer by stream proccessor service and change the transction amount to idr and transfer to another topic and consume by transaction consumer then put into database
+ #### Dummy system that streamed transaction from dummy transaction service and consume by stream proccessor service and change the transction amount to idr and transfer to another topic and consume by transaction consumer then put into database
  
 ### How to Setup
 * cd kafka
